@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Furniture Landed Cost Calculator — Duty, Section 232, MPF, VAT | 000094</title>
+<meta name="description" content="Estimate the landed cost of furniture, mattresses and lighting: goods, freight, insurance, base duty, additional duties (Section 232, AD/CVD), MPF/HMF, import VAT and broker fees — per unit and total.">
+<link rel="canonical" href="https://000094.com/landed-cost.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="manifest" href="site.webmanifest"><meta name="theme-color" content="#14213D">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500..700;1,9..144,500&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+</head>
+<body data-root="" data-page="landed">
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar"><a href="https://web.works/contact" rel="noopener">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership &rarr;</a></div>
+<div id="site-header"></div>
+<main id="main">
+<section style="padding-bottom:20px"><div class="wrap">
+ <div class="crumbs"><a href="index.html">Home</a> / Landed Cost Calculator</div>
+ <span class="eyebrow">Tool · Planning estimate</span>
+ <h1>Landed Cost Calculator</h1>
+ <p class="lead">The true cost of a sofa is not the factory price. Enter your numbers — results update instantly. Use a preset to see how the pieces fit.</p>
+ <div class="badge-row"><button class="chip" data-preset='{"currency":"USD","basis":"fob","goods":20000,"freight":3500,"insurance":60,"units":120,"mfn":0,"extra":25,"extra2":0,"us":true,"ocean":true,"vat":0,"broker":250,"inland":900,"other":150,"markup":110}'>Example: upholstered sofas → U.S.</button><button class="chip" data-preset='{"currency":"EUR","basis":"cif","goods":30000,"freight":2800,"insurance":90,"units":400,"mfn":0,"extra":0,"extra2":0,"us":false,"ocean":true,"vat":20,"broker":180,"inland":700,"other":100,"markup":120}'>Example: dining chairs → EU (CIF + VAT)</button><button class="chip" data-preset='{"currency":"USD","basis":"fob","goods":12000,"freight":2200,"insurance":40,"units":300,"mfn":3.9,"extra":0,"extra2":0,"us":true,"ocean":true,"vat":0,"broker":200,"inland":600,"other":0,"markup":150}'>Example: LED luminaires → U.S.</button></div>
+ <p class="note">Examples use illustrative rates, not current rates for your product. Check your national tariff and current additional measures.</p>
+</div></section>
+<section style="padding-top:0"><div class="wrap tool">
+ <form class="card form" id="lcForm" onsubmit="return false">
+  <div class="row2"><div class="field"><label for="currency">Currency</label><select id="currency" name="currency"><option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option><option>INR</option><option>LKR</option></select></div>
+  <div class="field"><label for="basis">Duty valuation basis</label><select id="basis" name="basis"><option value="fob">FOB / transaction value (U.S., Canada)</option><option value="cif">CIF (EU, UK, India, most others)</option></select></div></div>
+  <div class="row2"><div class="field"><label for="goods">Commercial invoice value</label><input id="goods" name="goods" inputmode="decimal" value="20000"></div><div class="field"><label for="units">Number of units</label><input id="units" name="units" inputmode="numeric" value="120"></div></div>
+  <div class="row2"><div class="field"><label for="freight">International freight</label><input id="freight" name="freight" inputmode="decimal" value="3500"></div><div class="field"><label for="insurance">Cargo insurance</label><input id="insurance" name="insurance" inputmode="decimal" value="60"></div></div>
+  <div class="row2"><div class="field"><label for="mfn">Base (MFN) duty %</label><input id="mfn" name="mfn" inputmode="decimal" value="0"></div><div class="field"><label for="extra">Additional duty % (e.g. Sec. 232 / 301)</label><input id="extra" name="extra" inputmode="decimal" value="25"></div></div>
+  <div class="row2"><div class="field"><label for="extra2">Anti-dumping / countervailing %</label><input id="extra2" name="extra2" inputmode="decimal" value="0"></div><div class="field"><label for="vat">Import VAT / GST %</label><input id="vat" name="vat" inputmode="decimal" value="0"></div></div>
+  <label class="check"><input type="checkbox" name="us" checked> U.S. entry — add Merchandise Processing Fee (0.3464%, min/max below)</label>
+  <label class="check"><input type="checkbox" name="ocean" checked> Ocean shipment — add Harbor Maintenance Fee (0.125%, U.S.)</label>
+  <div class="row2"><div class="field"><label for="mpfmin">MPF minimum</label><input id="mpfmin" name="mpfmin" inputmode="decimal" value="33.58"></div><div class="field"><label for="mpfmax">MPF maximum</label><input id="mpfmax" name="mpfmax" inputmode="decimal" value="651.50"></div></div>
+  <div class="row2"><div class="field"><label for="broker">Customs broker / entry fees</label><input id="broker" name="broker" inputmode="decimal" value="250"></div><div class="field"><label for="inland">Port & inland delivery</label><input id="inland" name="inland" inputmode="decimal" value="900"></div></div>
+  <div class="row2"><div class="field"><label for="other">Other (bond, exam, storage)</label><input id="other" name="other" inputmode="decimal" value="150"></div><div class="field"><label for="markup">Target retail markup %</label><input id="markup" name="markup" inputmode="decimal" value="110"></div></div>
+  <p class="note mb0">MPF limits change each U.S. fiscal year (1 October). Update the min/max to CBP's current values.</p>
+ </form>
+ <div>
+  <div class="card">
+   <span class="eyebrow">Estimated landed cost</span>
+   <div class="result-big" id="lcTotal">–</div><div class="mono" id="lcUnit" style="color:var(--teal);font-weight:600"></div>
+   <div class="bar" id="lcBar"></div><div class="legend" id="lcLegend"></div>
+   <div id="lcRows" style="margin-top:12px"></div>
+   <div class="kv"><span><strong>Suggested retail price per unit</strong></span><span id="lcPrice">–</span></div>
+   <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><button class="btn btn-ghost" onclick="window.print()">Print / save PDF</button><a class="btn btn-primary" href="sourcing.html">Get a broker to confirm</a></div>
+  </div>
+  <div class="callout"><strong>Why this matters:</strong> with a 25% additional duty on an FOB-valued sofa, duty alone adds a quarter of your factory price — before freight, fees and inland delivery. On 1 January 2027 the scheduled U.S. step-up would raise that to 30% for upholstered wood furniture and 50% for cabinets and vanities.</div>
+ </div>
+</div></section>
+<section class="sec-alt"><div class="wrap article" style="max-width:900px">
+ <h2 class="mt0">Methodology</h2>
+ <p><strong>Duty base.</strong> The U.S. and Canada assess ad valorem duty on the transaction (roughly FOB) value; the EU, UK, India and most other countries use CIF — goods plus freight and insurance to the border. Switch the basis to match your destination.</p>
+ <p><strong>Duties.</strong> Base duty, additional duty and AD/CVD are each applied to the duty base. In practice some measures do not stack (for example, U.S. Section 232 wood-product duties replace certain other additional tariffs); enter only the measures that apply to your entry.</p>
+ <p><strong>U.S. fees.</strong> The Merchandise Processing Fee is 0.3464% of entered value, bounded by a minimum and maximum set annually. The Harbor Maintenance Fee is 0.125% of value for cargo entering through U.S. seaports.</p>
+ <p><strong>Import VAT/GST.</strong> Calculated on CIF value plus duties, which is the standard base in the EU and UK. Registered businesses can usually reclaim it, so it affects cash flow more than margin.</p>
+ <p class="note">Estimates only. Not a binding ruling or legal advice. Confirm with a licensed customs broker or your customs authority. Read the <a href="guides/landed-cost-furniture-imports.html">full landed-cost guide</a>.</p>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/tools.js" defer></script>
+</body>
+</html>
